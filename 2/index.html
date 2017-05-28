@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<style>
+	.is-loading {
+		background: red;
+	}
+</style>
+<script src="../vue.js"></script>
+
+<div id="root">
+	<h1 :class="{'is-loading' : isLoad}">hello</h1>
+	<button  @click="toggleClass">Hover over me</button>
+</div>
+
+
+<script>
+
+	let app = new Vue({
+		el: '#root',
+		data: {
+			isLoad: false
+		},
+		methods: {
+			toggleClass() {
+				this.isLoad ? this.isLoad = false : this.isLoad = true;
+			}
+		}
+
+	});
+
+</script>
+</body>
+</html>

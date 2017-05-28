@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<style>
+	.is-loading {
+		background: red;
+	}
+</style>
+<script src="../vue.js"></script>
+
+<div id="root">
+	<h3>All tasks</h3>
+	<ul>
+		<li v-for="task in tasks" v-text="task.description"></li>
+	</ul>
+	<h3>Incompleted tasks</h3>
+	<ul>
+		<li v-for="task in incomplete" v-text="task.description"></li>
+	</ul>
+</div>
+
+
+<script>
+
+	let app = new Vue({
+		el: '#root',
+		data: {
+			message: 'Hello World',
+			tasks: [
+				{description: 'go to finish', completed: true},
+				{description: 'go to gagag', completed: false},
+				{description: 'go to home', completed: true},
+				{description: 'go to dad', completed: false}
+			]
+		},
+
+		computed: {
+			incomplete() {
+				return this.tasks.filter(task => !task.completed);
+			}
+		}
+
+	});
+
+</script>
+</body>
+</html>
