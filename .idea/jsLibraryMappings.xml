@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$/11/learn-vue-webpack" libraries="{VueJS/11/learn-vue-webpack/node_modules}" />
+    <file url="PROJECT" libraries="{VueJS/11/learn-vue-webpack/node_modules, jquery}" />
     <includedPredefinedLibrary name="ECMAScript 6" />
     <includedPredefinedLibrary name="WebGL" />
   </component>
